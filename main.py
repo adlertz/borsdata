@@ -24,7 +24,5 @@ def call_api(url, params):
 
     return response.json()
 
-json_data = call_api(base_url + "branches", params)
-#parsed = json.loads(json_data)
+json_data = call_api(base_url + "instruments", params)
 print(json.dumps(json_data, indent=4, sort_keys=True))
-#print(f"{json_data}")

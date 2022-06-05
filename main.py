@@ -4,6 +4,7 @@ import os
 import sys
 import requests
 #import pandas as pd
+import json
 
 base_url = "https://apiservice.borsdata.se/v1/"
 auth_key = os.environ.get('BORSDATA_AUTH_KEY')
@@ -13,7 +14,6 @@ if auth_key == None:
 
 params = {
     "authKey": auth_key,
-    "maxCount": 20,
 }
 
 def call_api(url, params):
@@ -25,5 +25,6 @@ def call_api(url, params):
     return response.json()
 
 json_data = call_api(base_url + "branches", params)
-
-print(f"{json_data}")
+#parsed = json.loads(json_data)
+print(json.dumps(json_data, indent=4, sort_keys=True))
+#print(f"{json_data}")

@@ -16,4 +16,4 @@ export BORSDATA_AUTH_KEY=...
 python main.py
 ```
 
-For now the script just loads the (first 20) available branches at Börsdata.
+For now the script just loads the available branches at Börsdata.
